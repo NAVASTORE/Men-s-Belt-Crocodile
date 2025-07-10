@@ -4,455 +4,259 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Men's Premium Crocodile Belt - Aksesori Wajib Pria Berkelas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        :root {
-            --primary: #d4af37;
-            --secondary: #000000;
-            --accent: #b8860b;
-            --light: #f8f8f8;
-            --dark: #222222;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', Arial, sans-serif;
-        }
-        
-        body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--secondary) 0%, #333 100%);
-            color: white;
-            padding: 20px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .cta-button {
-            background-color: var(--primary);
-            color: var(--secondary);
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.4);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: url('https://cdn.hotishop.com/image/75668eaf0fef79d48d41197fd681f7b3445cfbd7.jpeg') no-repeat center center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            max-width: 600px;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
         }
         
         .price-tag {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--secondary);
-            padding: 15px 25px;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 24px;
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
         }
         
-        .original-price {
-            text-decoration: line-through;
-            color: #ccc;
-            font-size: 18px;
-            margin-right: 10px;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 36px;
-            color: var(--secondary);
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
         }
         
         .feature-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
         
         .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        /* Gallery Section */
-        .gallery {
-            padding: 80px 0;
-            background-color: var(--light);
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.5);
         }
         
         .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            height: 250px;
+            overflow: hidden;
         }
         
-        .gallery-item:hover {
-            transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
         
         .testimonial-card {
-            background-color: var(--light);
-            padding: 30px;
-            border-radius: 10px;
+            background: linear-gradient(145deg, #f9f9f9 0%, #ffffff 100%);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
+        .footer-gradient {
+            background: linear-gradient(135deg, #111 0%, #222 100%);
         }
         
-        .testimonial-author {
-            font-weight: 700;
-            color: var(--primary);
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
         }
         
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--secondary) 0%, #333 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: var(--light);
-            text-decoration: none;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        .copyright {
-            color: #aaa;
-            font-size: 14px;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">PREMIUM CROCODILE BELT</div>
-            <a href="#order" class="cta-button">PESAN SEKARANG</a>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-black to-gray-800 text-white py-5 shadow-lg">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gold-500 font-playfair">PREMIUM CROCODILE BELT</div>
+            <a href="#order" class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-full hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1">
+                PESAN SEKARANG
+            </a>
         </div>
     </header>
-    
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>ELEGANSI TANPA BATAS DENGAN CROCODILE BELT PREMIUM</h1>
-            <p>Sabuk kulit buaya asli yang akan mengangkat gaya dan kepercayaan diri Anda ke level berikutnya.</p>
-            <div class="price-tag">
-                <span class="original-price">Rp308,000</span>
-                <span>Rp185,000</span>
+
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-screen flex items-center" style="background-image: url('https://cdn.hotishop.com/image/27ed780d5e46dfb4481b1a2d211835ac93b35c71-600.jpeg')">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10 text-white max-w-2xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-playfair">
+                ELEGANSI TANPA BATAS DENGAN CROCODILE BELT PREMIUM
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Sabuk kulit buaya asli yang akan mengangkat gaya dan kepercayaan diri Anda ke level berikutnya.
+            </p>
+            <div class="price-tag inline-block px-8 py-4 rounded-lg mb-6">
+                <span class="line-through text-gray-300 mr-3 text-lg">Rp308,000</span>
+                <span class="text-2xl font-bold">Rp185,000</span>
             </div>
-            <p><strong>Hemat 40% - Promo Terbatas!</strong></p>
-            <a href="#order" class="cta-button">DAPATKAN DISKON SEKARANG <i class="fas fa-arrow-right"></i></a>
+            <p class="font-bold mb-8 text-lg">Hemat 40% - Promo Terbatas!</p>
+            <a href="#order" class="floating-button bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-4 px-8 rounded-full hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl">
+                DAPATKAN DISKON SEKARANG <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
     </section>
-    
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">KENAPA MEMILIH CROCODILE BELT KAMI?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 font-playfair">KENAPA MEMILIH CROCODILE BELT KAMI?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-gem"></i>
                     </div>
-                    <h3>Material Premium</h3>
-                    <p>Kulit buaya asli berkualitas tinggi dengan tekstur eksklusif yang tahan lama dan semakin elegan seiring waktu.</p>
+                    <h3 class="text-xl font-bold mb-3">Material Premium</h3>
+                    <p class="text-gray-600">Kulit buaya asli berkualitas tinggi dengan tekstur eksklusif yang tahan lama dan semakin elegan seiring waktu.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-ruler-combined"></i>
                     </div>
-                    <h3>2 Ukuran Tersedia</h3>
-                    <p>Tersedia dalam ukuran 110cm dan 120cm, cocok untuk semua postur tubuh pria modern.</p>
+                    <h3 class="text-xl font-bold mb-3">2 Ukuran Tersedia</h3>
+                    <p class="text-gray-600">Tersedia dalam ukuran 110cm dan 120cm, cocok untuk semua postur tubuh pria modern.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3>2 Warna Eksklusif</h3>
-                    <p>Pilihan warna hitam klasik dan cokelat elegan yang mudah dipadukan dengan berbagai outfit.</p>
+                    <h3 class="text-xl font-bold mb-3">2 Warna Eksklusif</h3>
+                    <p class="text-gray-600">Pilihan warna hitam klasik dan cokelat elegan yang mudah dipadukan dengan berbagai outfit.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-medal"></i>
                     </div>
-                    <h3>Kualitas Terjamin</h3>
-                    <p>Setiap sabuk melalui proses quality control ketat untuk memastikan kesempurnaan produk.</p>
+                    <h3 class="text-xl font-bold mb-3">Kualitas Terjamin</h3>
+                    <p class="text-gray-600">Setiap sabuk melalui proses quality control ketat untuk memastikan kesempurnaan produk.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3>Pengiriman Cepat</h3>
-                    <p>Pesanan dikirim dalam 24 jam setelah pembayaran diterima dengan kemasan eksklusif.</p>
+                    <h3 class="text-xl font-bold mb-3">Pengiriman Cepat</h3>
+                    <p class="text-gray-600">Pesanan dikirim dalam 24 jam setelah pembayaran diterima dengan kemasan eksklusif.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white p-8 rounded-xl">
+                    <div class="text-yellow-600 text-4xl mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Garansi Kepuasan</h3>
-                    <p>100% uang kembali jika produk tidak sesuai ekspektasi atau terdapat cacat produksi.</p>
+                    <h3 class="text-xl font-bold mb-3">Garansi Kepuasan</h3>
+                    <p class="text-gray-600">100% uang kembali jika produk tidak sesuai ekspektasi atau terdapat cacat produksi.</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="gallery">
-        <div class="container">
-            <h2 class="section-title">GALERI PRODUK KAMI</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/49418a9e1fde706ec680f0ea0ea04bc4bc08464e.jpeg" alt="Crocodile Belt Hitam">
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 font-playfair">GALERI PRODUK KAMI</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/ee969f3db5bab6c444db5a06cfc6e1d161bd30ce.gif" alt="Crocodile Belt Hitam" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/4b5e753f3605d4b241f2c83ad4022c2abc7350d8.gif" alt="Crocodile Belt Cokelat">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/4b5e753f3605d4b241f2c83ad4022c2abc7350d8.gif" alt="Crocodile Belt Cokelat" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/6c44117727339de43c41b327ba31327286e1e49b.gif" alt="Detail Crocodile Belt">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/8d5a068054e110454214eb20619b7697b17a5816.jpeg" alt="Detail Crocodile Belt" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/063c44701fe7e5dd2187701f561d902036c1c4fd.jpeg" alt="Crocodile Belt Dipakai">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/4fa8056d3d3a0d0e1af3f711bc252babe1af88fc-700.jpeg" alt="Kemasan Eksklusif" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/e9ddd0fe3fb6008ccd7e9c6d3d65365988e3fc95.jpeg" alt="Kemasan Eksklusif">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/7f55585aea98869c55eea2ee9bee118b98205610-600.jpeg" alt="Perbandingan Warna" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/a36c98bc0b8babffdf42a03776200b367275ca12.jpeg" alt="Perbandingan Warna">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/6c44117727339de43c41b327ba31327286e1e49b.gif" alt="Detail Buckle" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/3222421f45685ac9e32b8bd8b8fecef8c51bda91.gif" alt="Detail Buckle">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.hotishop.com/image/75668eaf0fef79d48d41197fd681f7b3445cfbd7.jpeg" alt="Full Set Crocodile Belt">
+                <div class="gallery-item rounded-xl overflow-hidden h-64">
+                    <img src="https://cdn.hotishop.com/image/3222421f45685ac9e32b8bd8b8fecef8c51bda91.gif" alt="Full Set Crocodile Belt" class="w-full h-full object-cover transition-transform duration-500">
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">APA KATA MEREKA?</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Kualitasnya benar-benar premium! Sabuk ini langsung menjadi favorit saya untuk meeting penting. Tekstur kulit buayanya terasa mewah dan buckle-nya kokoh. Worth every penny!"</p>
-                    <p class="testimonial-author">- Andi K., Direktur Perusahaan (45 tahun)</p>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 font-playfair">APA KATA MEREKA?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 rounded-xl">
+                    <p class="italic text-gray-700 mb-6 text-lg">
+                        "Kualitasnya benar-benar premium! Sabuk ini langsung menjadi favorit saya untuk meeting penting. Tekstur kulit buayanya terasa mewah dan buckle-nya kokoh. Worth every penny!"
+                    </p>
+                    <p class="font-bold text-yellow-600">- Andi K., Direktur Perusahaan (45 tahun)</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Saya sudah mencoba banyak sabuk branded, tapi ini yang paling istimewa. Warna cokelatnya sangat elegan dan tahan lama setelah 6 bulan pemakaian. Pelayanannya juga cepat!"</p>
-                    <p class="testimonial-author">- Rizal H., Entrepreneur (32 tahun)</p>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 rounded-xl">
+                    <p class="italic text-gray-700 mb-6 text-lg">
+                        "Saya sudah mencoba banyak sabuk branded, tapi ini yang paling istimewa. Warna cokelatnya sangat elegan dan tahan lama setelah 6 bulan pemakaian. Pelayanannya juga cepat!"
+                    </p>
+                    <p class="font-bold text-yellow-600">- Rizal H., Entrepreneur (32 tahun)</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Hadiah untuk suami yang sangat dia sukai. Kemasannya mewah banget, layaknya produk high-end. Sekarang dia selalu pakai sabuk ini untuk acara penting. Terima kasih!"</p>
-                    <p class="testimonial-author">- Dian S., Istri Eksekutif (38 tahun)</p>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 rounded-xl">
+                    <p class="italic text-gray-700 mb-6 text-lg">
+                        "Hadiah untuk suami yang sangat dia sukai. Kemasannya mewah banget, layaknya produk high-end. Sekarang dia selalu pakai sabuk ini untuk acara penting. Terima kasih!"
+                    </p>
+                    <p class="font-bold text-yellow-600">- Dian S., Istri Eksekutif (38 tahun)</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Sebagai kolektor aksesori pria, saya bisa bilang ini salah satu sabuk terbaik di kelasnya. Detailnya sempurna dan harganya sangat reasonable untuk kualitas seperti ini."</p>
-                    <p class="testimonial-author">- Fajar W., Fashion Enthusiast (28 tahun)</p>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-8 rounded-xl">
+                    <p class="italic text-gray-700 mb-6 text-lg">
+                        "Sebagai kolektor aksesori pria, saya bisa bilang ini salah satu sabuk terbaik di kelasnya. Detailnya sempurna dan harganya sangat reasonable untuk kualitas seperti ini."
+                    </p>
+                    <p class="font-bold text-yellow-600">- Fajar W., Fashion Enthusiast (28 tahun)</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section class="cta-section" id="order">
-        <div class="container">
-            <h2>JANGAN LEWATKAN KESEMPATAN INI!</h2>
-            <p>Diskon 40% hanya untuk 100 pembeli pertama hari ini. Elevate your style dengan Crocodile Belt Premium yang akan membuat Anda menonjol di setiap kesempatan.</p>
-            <div class="price-tag" style="margin: 30px auto;">
-                <span class="original-price">Rp308,000</span>
-                <span>Rp185,000</span>
+
+    <!-- CTA Section -->
+    <section id="order" class="py-20 bg-gradient-to-r from-black to-gray-800 text-white text-center">
+        <div class="container mx-auto px-4 md:px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-playfair">JANGAN LEWATKAN KESEMPATAN INI!</h2>
+            <p class="text-xl mb-10">
+                Diskon 40% hanya untuk 100 pembeli pertama hari ini. Elevate your style dengan Crocodile Belt Premium yang akan membuat Anda menonjol di setiap kesempatan.
+            </p>
+            <div class="price-tag inline-block px-10 py-5 rounded-lg mb-8">
+                <span class="line-through text-gray-300 mr-4 text-xl">Rp308,000</span>
+                <span class="text-3xl font-bold">Rp185,000</span>
             </div>
-            <a href="https://nava.orderonline.id/mens-crocodile-patterned-belt" class="cta-button">PESAN SEKARANG <i class="fas fa-arrow-right"></i></a>
-            <p style="margin-top: 20px; font-size: 16px;">*Stok terbatas. Pesanan diproses berdasarkan waktu pembayaran.</p>
+            <div class="mb-6">
+               <!-- OrderOnline Embed Code - v8.0.4 --> <div class="ooef"> <form class="orderonline-embed-form" data-username="nava" data-product-slug="mens-crocodile-patterned-belt" data-product-id="686fec62108c10f09d0e7c46" id="oo-embed-form-mens-crocodile-patterned-belt-4897" data-origin="orderonline"> <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div> </form> </div> <script> if (typeof xLogError != 'function') { var xLogError = function (error) { var req = new XMLHttpRequest(); var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack }); var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error'; req.open('POST', 'https://api.orderonline.id/log', true); req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); req.send(params); }; } try { if (typeof xEmbedScript != 'function') { var xEmbedScript = function () { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js'); }; } if (typeof xEmbedInit != 'function') { var xEmbedInit = function (w, n) { if (w.ooe) return; n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!w._ooe) w._ooe = n; n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = []; }; } xEmbedInit(window); ooe('setup', 'redirect', 'https://nava.orderonline.id'); ooe('init', '5f119cd08dcbdb2737678706', '686fec62108c10f09d0e7c46', '686fec62108c10f09d0e7c47', 'oo-embed-form-mens-crocodile-patterned-belt-4897', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false}); if (!window.jQuery) { !function(w, d, e, v, id, t, s) { if (d.getElementById(id)) return; t = d.createElement(e);t.async = !0;t.src = v;t.id = id; t.addEventListener('load', xEmbedScript); s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery'); } else { xEmbedScript(); } } catch (e) { xLogError(e); throw e; } </script> <!-- End OrderOnline Embed Code -->
+                </a>
+            </div>
+            <p class="text-sm text-gray-300">*Stok terbatas. Pesanan diproses berdasarkan waktu pembayaran.</p>
         </div>
     </section>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Syarat & Ketentuan</a>
-                <a href="#">Kebijakan Privasi</a>
-                <a href="#">Hubungi Kami</a>
+
+    <!-- Footer -->
+    <footer class="footer-gradient py-12 text-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <div class="flex flex-wrap justify-center gap-6 mb-6">
+                <a href="#" class="hover:text-yellow-500 transition-colors duration-300">Syarat & Ketentuan</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors duration-300">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-yellow-500 transition-colors duration-300">Hubungi Kami</a>
             </div>
-            <p class="copyright">© 2023 Premium Crocodile Belt. All Rights Reserved.</p>
+            <p class="text-gray-400 text-sm">© 2023 Premium Crocodile Belt. All Rights Reserved.</p>
         </div>
     </footer>
+    </a>
 </body>
 </html>
